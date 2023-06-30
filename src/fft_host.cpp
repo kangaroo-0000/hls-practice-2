@@ -1,31 +1,30 @@
 #include <fstream>
 #include <iostream>
-#include "hls_stream.h"
 #include "fft.h"
 
 int main() {
-  hls::stream<DTYPE> real_in_stream("real_in_stream"), imag_in_stream("imag_in_stream");
-  hls::stream<DTYPE> real_out_stream("real_out_stream"), imag_out_stream("imag_out_stream");
-  std::cout << "in main" << std::endl;
-  // Generate the inputs and write them to the streams
+  DTYPE real_input[SIZE], imag_input[SIZE];
+  DTYPE real_output[SIZE], imag_output[SIZE];
+
+  // Generate the inputs
   for (int i = 0; i < SIZE; i++) {
-    real_in_stream.write(i);
-    imag_in_stream.write(0.0);
+    real_input[i] = i;
+    imag_input[i] = 0.0;
   }
 
-  // Perform FFT
-  fft_streaming(real_in_stream, imag_in_stream, real_out_stream, imag_out_stream);
-
+  fft_streaming(real_input, imag_input, real_output, imag_output);
+  std::cout << "FFT is successful." << std::endl;
+  std::cout << real_output[10] << imag_output[0] << std::endl;
   // Print FFT output
   std::ofstream output_file("out.fft.dat");
   for (int i = 0; i < SIZE; i++) {
-    DTYPE real_output = real_out_stream.read();
-    DTYPE imag_output = imag_out_stream.read();
-    output_file << i << "\t" << real_output << "\t" << imag_output << "\n";
+	std::cout << "real output " << i << "is: " << real_output[i] << ". Imaginary output " << i << "is: " << imag_output[i] << std::endl;
+    output_file << i << "\t" << real_output[i] << "\t" << imag_output[i] << "\n";
   }
   output_file.close();
+  std::cout << "Printing output is successful." << std::endl;
 
-  // Compare the output with the golden output
+  // Please include your own golden file
   std::ifstream golden_file("out.fft.gold.dat");
   DTYPE average_error = 0.0;
   DTYPE max_error = 0.0;
@@ -33,10 +32,8 @@ int main() {
     DTYPE golden_real, golden_imag;
     int index;
     golden_file >> index >> golden_real >> golden_imag;
-    DTYPE real_output = real_out_stream.read();
-    DTYPE imag_output = imag_out_stream.read();
-    DTYPE current_error = std::abs(golden_real - real_output) +
-                          std::abs(golden_imag - imag_output);
+    DTYPE current_error = std::abs(golden_real - real_output[i]) +
+                          std::abs(golden_imag - imag_output[i]);
     average_error += current_error;
     if (current_error > max_error) {
       max_error = current_error;
