@@ -1,0 +1,4 @@
+remark: fft_baseline/fft.cpp:65:0: Unrolling loop 'stage_loop' (fft_baseline/fft.cpp:73:3) in function 'fft_streaming' completely with a factor of 9
+remark: fft_baseline/fft.cpp:15:0: Inlining function 'reverse_bits(unsigned int)' into 'bit_reverse(float*, float*, float*, float*)'
+remark: fft_baseline/fft.cpp:67:8: Applying array_partition to 'Stage_R': Complete partitioning on dimension 1.
+remark: fft_baseline/fft.cpp:67:27: Applying array_partition to 'Stage_I': Complete partitioning on dimension 1.

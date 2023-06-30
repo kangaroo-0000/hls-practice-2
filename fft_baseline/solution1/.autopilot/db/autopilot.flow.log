@@ -1,0 +1,1293 @@
+INFO-FLOW: Workspace /users/ugrad/chungmop/hls-practice/fft_baseline/solution1 opened at Fri Jun 30 11:19:07 PDT 2023
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xcvu11p-flga2577-1-e 
+Execute       create_platform xcvu11p-flga2577-1-e -board  
+DBG:HLSDevice: Trying to load device library: /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /ecelib/eceware/xilinx_2022.2/Vivado/2022.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+Command       create_platform done; 3.89 sec.
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 4.04 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 4.19 sec.
+Execute   set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+Execute     create_platform xcvu11p-flga2577-1-e -board  
+Execute     source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.14 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.06 seconds; current allocated memory: 842.527 MB.
+INFO: [HLS 200-10] Analyzing design file 'fft_baseline/fft_top.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling fft_baseline/fft_top.cpp as C++
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang fft_baseline/fft_top.cpp -foptimization-record-file=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot -I /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp -hls-platform-db-name=/ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.cpp.clang.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.cpp.clang.err.log 
+Command       ap_eval done; 0.36 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.4 seconds per iteration
+Execute       set_directive_top fft_streaming -name=fft_streaming 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp -hls-platform-db-name=/ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/clang.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.39 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp std=gnu++14 -target fpga  -directive=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/.systemc_flag -fix-errors /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.29 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp std=gnu++14 -target fpga  -directive=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/all.directive.json -fix-errors /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.29 sec.
+Execute       clang_tidy xilinx-remove-assert -desc remove-assert /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.28 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.6 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp.clang-tidy.loop-label.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command         ap_eval done; 0.49 sec.
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 0.55 sec.
+Execute       ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command       ap_eval done; 0.29 sec.
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot -I /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.bc -hls-platform-db-name=/ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp.clang.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 0.41 sec.
+INFO: [HLS 200-10] Analyzing design file 'fft_baseline/fft.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling fft_baseline/fft.cpp as C++
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang fft_baseline/fft.cpp -foptimization-record-file=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot -I /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp -hls-platform-db-name=/ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.cpp.clang.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.cpp.clang.err.log 
+Command       ap_eval done; 0.27 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+Execute       set_directive_top fft_streaming -name=fft_streaming 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp -hls-platform-db-name=/ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/clang.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.36 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp std=gnu++14 -target fpga  -directive=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/.systemc_flag -fix-errors /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.22 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp std=gnu++14 -target fpga  -directive=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/all.directive.json -fix-errors /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.39 sec.
+Execute       clang_tidy xilinx-remove-assert -desc remove-assert /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.23 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.6 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp.clang-tidy.loop-label.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command         ap_eval done; 0.44 sec.
+Command       clang_tidy done; 0.48 sec.
+Execute       ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command       ap_eval done; 0.25 sec.
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (fft_baseline/fft.cpp:66:9)
+Execute       send_msg_by_id WARNING @200-471@%s%s 1 fft_baseline/fft.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file fft_baseline/fft.cpp
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot -I /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.bc -hls-platform-db-name=/ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp.clang.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 0.42 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.99 seconds. CPU system time: 1.43 seconds. Elapsed time: 5.89 seconds; current allocated memory: 842.527 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.0.bc -args  "/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.g.bc" "/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.g.bc"  
+Execute         ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.g.bc /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.g.bc -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.0.bc > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.1.lower.bc > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.2.m1.bc > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command         ap_eval done; 2.7 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.72 sec.
+Execute       run_link_or_opt -opt -out /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fft_streaming -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fft_streaming -reflow-float-conversion -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command         ap_eval done; 1.15 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.15 sec.
+Execute       run_link_or_opt -out /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.4.m2.bc > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.11 sec.
+Execute       run_link_or_opt -opt -out /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=fft_streaming 
+Execute         ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=fft_streaming -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=fft_streaming -mllvm -hls-db-dir -mllvm /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command       ap_eval done; 0.73 sec.
+INFO: [HLS 214-186] Unrolling loop 'stage_loop' (fft_baseline/fft.cpp:73:3) in function 'fft_streaming' completely with a factor of 9 (fft_baseline/fft.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'reverse_bits(unsigned int)' into 'bit_reverse(float*, float*, float*, float*)' (fft_baseline/fft.cpp:15:0)
+INFO: [HLS 214-248] Applying array_partition to 'Stage_R': Complete partitioning on dimension 1. (fft_baseline/fft.cpp:67:8)
+INFO: [HLS 214-248] Applying array_partition to 'Stage_I': Complete partitioning on dimension 1. (fft_baseline/fft.cpp:67:27)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.71 seconds. CPU system time: 0.87 seconds. Elapsed time: 5.08 seconds; current allocated memory: 842.527 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 842.527 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top fft_streaming -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.0.bc -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 842.527 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.1.bc -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.2.prechk.bc -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 842.527 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.g.1.bc to /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.o.1.bc -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'butterfly_loop' (fft_baseline/fft.cpp:43) in function 'fft_stage.9' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_20_1' (fft_baseline/fft.cpp:20) in function 'bit_reverse' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_20_1' (fft_baseline/fft.cpp:20) in function 'bit_reverse' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_7_1' (fft_baseline/fft.cpp:6) in function 'bit_reverse' completely with a factor of 10.
+INFO: [XFORM 203-712] Applying dataflow to function 'fft_streaming' (fft_baseline/fft.cpp:64:1), detected/extracted 11 process function(s): 
+	 'bit_reverse'
+	 'fft_stage'
+	 'fft_stage.1'
+	 'fft_stage.2'
+	 'fft_stage.3'
+	 'fft_stage.4'
+	 'fft_stage.5'
+	 'fft_stage.6'
+	 'fft_stage.7'
+	 'fft_stage.8'
+	 'fft_stage.9'.
+Command         transform done; 0.17 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.o.1.tmp.bc -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.12 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.21 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.3 seconds; current allocated memory: 906.527 MB.
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.o.2.bc -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_baseline/fft.cpp:43:12) in function 'fft_stage.8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_baseline/fft.cpp:43:12) in function 'fft_stage.7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_baseline/fft.cpp:43:12) in function 'fft_stage.6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_baseline/fft.cpp:43:12) in function 'fft_stage.5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_baseline/fft.cpp:43:12) in function 'fft_stage.4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_baseline/fft.cpp:43:12) in function 'fft_stage.3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_baseline/fft.cpp:43:12) in function 'fft_stage.2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'butterfly_loop' (fft_baseline/fft.cpp:43:12) in function 'fft_stage.1'.
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:56:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:57:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:58:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:59:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:56:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:57:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:58:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:59:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:56:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:57:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:58:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:59:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:56:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:57:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:58:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:59:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:56:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:57:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:58:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:59:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:56:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:57:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:58:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:59:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:56:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:57:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:58:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:59:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:56:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:57:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:58:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:59:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:56:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:57:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_R' (fft_baseline/fft.cpp:58:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_I' (fft_baseline/fft.cpp:59:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_R' (fft_baseline/fft.cpp:25:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_R' (fft_baseline/fft.cpp:26:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_I' (fft_baseline/fft.cpp:30:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'OUT_I' (fft_baseline/fft.cpp:31:20)
+Command         transform done; 0.41 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.19 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.41 seconds; current allocated memory: 970.527 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 0.91 sec.
+Command     elaborate done; 11.9 sec.
+Execute     ap_eval exec zip -j /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'fft_streaming' ...
+Execute       ap_set_top_model fft_streaming 
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.1' to 'fft_stage_1'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.2' to 'fft_stage_2'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.3' to 'fft_stage_3'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.4' to 'fft_stage_4'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.5' to 'fft_stage_5'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.6' to 'fft_stage_6'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.7' to 'fft_stage_7'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.8' to 'fft_stage_8'.
+WARNING: [SYN 201-103] Legalizing function name 'fft_stage.9' to 'fft_stage_9'.
+Execute       get_model_list fft_streaming -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model fft_streaming 
+Execute       preproc_iomode -model fft_stage.9 
+Execute       preproc_iomode -model fft_stage.8 
+Execute       preproc_iomode -model fft_stage.7 
+Execute       preproc_iomode -model fft_stage.6 
+Execute       preproc_iomode -model fft_stage.5 
+Execute       preproc_iomode -model fft_stage.4 
+Execute       preproc_iomode -model fft_stage.3 
+Execute       preproc_iomode -model fft_stage.2 
+Execute       preproc_iomode -model fft_stage.1 
+Execute       preproc_iomode -model fft_stage 
+Execute       preproc_iomode -model bit_reverse 
+Execute       get_model_list fft_streaming -filter all-wo-channel 
+INFO-FLOW: Model list for configure: bit_reverse fft_stage fft_stage.1 fft_stage.2 fft_stage.3 fft_stage.4 fft_stage.5 fft_stage.6 fft_stage.7 fft_stage.8 fft_stage.9 fft_streaming
+INFO-FLOW: Configuring Module : bit_reverse ...
+Execute       set_default_model bit_reverse 
+Execute       apply_spec_resource_limit bit_reverse 
+INFO-FLOW: Configuring Module : fft_stage ...
+Execute       set_default_model fft_stage 
+Execute       apply_spec_resource_limit fft_stage 
+INFO-FLOW: Configuring Module : fft_stage.1 ...
+Execute       set_default_model fft_stage.1 
+Execute       apply_spec_resource_limit fft_stage.1 
+INFO-FLOW: Configuring Module : fft_stage.2 ...
+Execute       set_default_model fft_stage.2 
+Execute       apply_spec_resource_limit fft_stage.2 
+INFO-FLOW: Configuring Module : fft_stage.3 ...
+Execute       set_default_model fft_stage.3 
+Execute       apply_spec_resource_limit fft_stage.3 
+INFO-FLOW: Configuring Module : fft_stage.4 ...
+Execute       set_default_model fft_stage.4 
+Execute       apply_spec_resource_limit fft_stage.4 
+INFO-FLOW: Configuring Module : fft_stage.5 ...
+Execute       set_default_model fft_stage.5 
+Execute       apply_spec_resource_limit fft_stage.5 
+INFO-FLOW: Configuring Module : fft_stage.6 ...
+Execute       set_default_model fft_stage.6 
+Execute       apply_spec_resource_limit fft_stage.6 
+INFO-FLOW: Configuring Module : fft_stage.7 ...
+Execute       set_default_model fft_stage.7 
+Execute       apply_spec_resource_limit fft_stage.7 
+INFO-FLOW: Configuring Module : fft_stage.8 ...
+Execute       set_default_model fft_stage.8 
+Execute       apply_spec_resource_limit fft_stage.8 
+INFO-FLOW: Configuring Module : fft_stage.9 ...
+Execute       set_default_model fft_stage.9 
+Execute       apply_spec_resource_limit fft_stage.9 
+INFO-FLOW: Configuring Module : fft_streaming ...
+Execute       set_default_model fft_streaming 
+Execute       apply_spec_resource_limit fft_streaming 
+INFO-FLOW: Model list for preprocess: bit_reverse fft_stage fft_stage.1 fft_stage.2 fft_stage.3 fft_stage.4 fft_stage.5 fft_stage.6 fft_stage.7 fft_stage.8 fft_stage.9 fft_streaming
+INFO-FLOW: Preprocessing Module: bit_reverse ...
+Execute       set_default_model bit_reverse 
+Execute       cdfg_preprocess -model bit_reverse 
+Execute       rtl_gen_preprocess bit_reverse 
+INFO-FLOW: Preprocessing Module: fft_stage ...
+Execute       set_default_model fft_stage 
+Execute       cdfg_preprocess -model fft_stage 
+Execute       rtl_gen_preprocess fft_stage 
+INFO-FLOW: Preprocessing Module: fft_stage.1 ...
+Execute       set_default_model fft_stage.1 
+Execute       cdfg_preprocess -model fft_stage.1 
+Execute       rtl_gen_preprocess fft_stage.1 
+INFO-FLOW: Preprocessing Module: fft_stage.2 ...
+Execute       set_default_model fft_stage.2 
+Execute       cdfg_preprocess -model fft_stage.2 
+Execute       rtl_gen_preprocess fft_stage.2 
+INFO-FLOW: Preprocessing Module: fft_stage.3 ...
+Execute       set_default_model fft_stage.3 
+Execute       cdfg_preprocess -model fft_stage.3 
+Execute       rtl_gen_preprocess fft_stage.3 
+INFO-FLOW: Preprocessing Module: fft_stage.4 ...
+Execute       set_default_model fft_stage.4 
+Execute       cdfg_preprocess -model fft_stage.4 
+Execute       rtl_gen_preprocess fft_stage.4 
+INFO-FLOW: Preprocessing Module: fft_stage.5 ...
+Execute       set_default_model fft_stage.5 
+Execute       cdfg_preprocess -model fft_stage.5 
+Execute       rtl_gen_preprocess fft_stage.5 
+INFO-FLOW: Preprocessing Module: fft_stage.6 ...
+Execute       set_default_model fft_stage.6 
+Execute       cdfg_preprocess -model fft_stage.6 
+Execute       rtl_gen_preprocess fft_stage.6 
+INFO-FLOW: Preprocessing Module: fft_stage.7 ...
+Execute       set_default_model fft_stage.7 
+Execute       cdfg_preprocess -model fft_stage.7 
+Execute       rtl_gen_preprocess fft_stage.7 
+INFO-FLOW: Preprocessing Module: fft_stage.8 ...
+Execute       set_default_model fft_stage.8 
+Execute       cdfg_preprocess -model fft_stage.8 
+Execute       rtl_gen_preprocess fft_stage.8 
+INFO-FLOW: Preprocessing Module: fft_stage.9 ...
+Execute       set_default_model fft_stage.9 
+Execute       cdfg_preprocess -model fft_stage.9 
+Execute       rtl_gen_preprocess fft_stage.9 
+INFO-FLOW: Preprocessing Module: fft_streaming ...
+Execute       set_default_model fft_streaming 
+Execute       cdfg_preprocess -model fft_streaming 
+Execute       rtl_gen_preprocess fft_streaming 
+INFO-FLOW: Model list for synthesis: bit_reverse fft_stage fft_stage.1 fft_stage.2 fft_stage.3 fft_stage.4 fft_stage.5 fft_stage.6 fft_stage.7 fft_stage.8 fft_stage.9 fft_streaming
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bit_reverse' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model bit_reverse 
+Execute       schedule -model bit_reverse 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+WARNING: [HLS 200-880] The II Violation in module 'bit_reverse' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('OUT_I_addr_2_write_ln31', fft_baseline/fft.cpp:31) of variable 'temp', fft_baseline/fft.cpp:29 on array 'OUT_I' and 'store' operation ('OUT_I_addr_write_ln30', fft_baseline/fft.cpp:30) of variable 'bitcast_ln30', fft_baseline/fft.cpp:30 on array 'OUT_I'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.3 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse.sched.adb -f 
+INFO-FLOW: Finish scheduling bit_reverse.
+Execute       set_default_model bit_reverse 
+Execute       bind -model bit_reverse 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse.bind.adb -f 
+INFO-FLOW: Finish binding bit_reverse.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage 
+Execute       schedule -model fft_stage 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dft_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'dft_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.
+Execute       set_default_model fft_stage 
+Execute       bind -model fft_stage 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.1 
+Execute       schedule -model fft_stage.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'butterfly_loop_dft_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.14 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.1.
+Execute       set_default_model fft_stage.1 
+Execute       bind -model fft_stage.1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.13 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.2 
+Execute       schedule -model fft_stage.2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'butterfly_loop_dft_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.22 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.38 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.2.
+Execute       set_default_model fft_stage.2 
+Execute       bind -model fft_stage.2 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.13 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.3 
+Execute       schedule -model fft_stage.3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'butterfly_loop_dft_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.21 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.3.
+Execute       set_default_model fft_stage.3 
+Execute       bind -model fft_stage.3 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.15 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.4 
+Execute       schedule -model fft_stage.4 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'butterfly_loop_dft_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.16 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.13 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.4.
+Execute       set_default_model fft_stage.4 
+Execute       bind -model fft_stage.4 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.13 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.13 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.4.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.5 
+Execute       schedule -model fft_stage.5 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'butterfly_loop_dft_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.17 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.13 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.5.
+Execute       set_default_model fft_stage.5 
+Execute       bind -model fft_stage.5 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.11 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.13 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.5.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.6 
+Execute       schedule -model fft_stage.6 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'butterfly_loop_dft_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.17 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.6.
+Execute       set_default_model fft_stage.6 
+Execute       bind -model fft_stage.6 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.12 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.12 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.6.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.7 
+Execute       schedule -model fft_stage.7 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'butterfly_loop_dft_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.14 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.7.
+Execute       set_default_model fft_stage.7 
+Execute       bind -model fft_stage.7 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.16 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.14 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.7.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.8 
+Execute       schedule -model fft_stage.8 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop_dft_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'butterfly_loop_dft_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.15 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.8.
+Execute       set_default_model fft_stage.8 
+Execute       bind -model fft_stage.8 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.17 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.14 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.8.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stage_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_stage.9 
+Execute       schedule -model fft_stage.9 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'butterfly_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'butterfly_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.14 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_stage.9.
+Execute       set_default_model fft_stage.9 
+Execute       bind -model fft_stage.9 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.13 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.11 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9.bind.adb -f 
+INFO-FLOW: Finish binding fft_stage.9.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_streaming' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft_streaming 
+Execute       schedule -model fft_streaming 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.sched.adb -f 
+INFO-FLOW: Finish scheduling fft_streaming.
+Execute       set_default_model fft_streaming 
+Execute       bind -model fft_streaming 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.4 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.48 seconds; current allocated memory: 970.527 MB.
+Execute       syn_report -verbosereport -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.82 sec.
+Execute       db_write -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.bind.adb -f 
+INFO-FLOW: Finish binding fft_streaming.
+Execute       get_model_list fft_streaming -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess bit_reverse 
+Execute       rtl_gen_preprocess fft_stage 
+Execute       rtl_gen_preprocess fft_stage.1 
+Execute       rtl_gen_preprocess fft_stage.2 
+Execute       rtl_gen_preprocess fft_stage.3 
+Execute       rtl_gen_preprocess fft_stage.4 
+Execute       rtl_gen_preprocess fft_stage.5 
+Execute       rtl_gen_preprocess fft_stage.6 
+Execute       rtl_gen_preprocess fft_stage.7 
+Execute       rtl_gen_preprocess fft_stage.8 
+Execute       rtl_gen_preprocess fft_stage.9 
+Execute       rtl_gen_preprocess fft_streaming 
+INFO-FLOW: Model list for RTL generation: bit_reverse fft_stage fft_stage.1 fft_stage.2 fft_stage.3 fft_stage.4 fft_stage.5 fft_stage.6 fft_stage.7 fft_stage.8 fft_stage.9 fft_streaming
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bit_reverse' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model bit_reverse -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bit_reverse' pipeline 'VITIS_LOOP_20_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bit_reverse'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.85 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.9 seconds; current allocated memory: 970.527 MB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl bit_reverse -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_bit_reverse 
+Execute       gen_rtl bit_reverse -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_bit_reverse 
+Execute       syn_report -csynth -model bit_reverse -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/bit_reverse_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model bit_reverse -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/bit_reverse_csynth.xml 
+Execute       syn_report -verbosereport -model bit_reverse -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       db_write -model bit_reverse -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse.adb 
+Execute       db_write -model bit_reverse -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info bit_reverse -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_stage -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stage' pipeline 'dft_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage'.
+Command       create_rtl_model done; 0.12 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.3 seconds; current allocated memory: 970.527 MB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_fft_stage 
+Execute       gen_rtl fft_stage -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_fft_stage 
+Execute       syn_report -csynth -model fft_stage -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model fft_stage -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.12 sec.
+Execute       db_write -model fft_stage -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage.adb 
+Execute       db_write -model fft_stage -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_stage -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_stage.1 -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stage_1' pipeline 'butterfly_loop_dft_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_1'.
+INFO: [RTMG 210-279] Implementing memory 'fft_streaming_fft_stage_1_W_real_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft_streaming_fft_stage_1_W_imag_ROM_AUTO_1R' using auto ROMs.
+Command       create_rtl_model done; 0.11 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 970.527 MB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.1 -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_fft_stage_1 
+Execute       gen_rtl fft_stage.1 -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_fft_stage_1 
+Execute       syn_report -csynth -model fft_stage.1 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_1_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model fft_stage.1 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_1_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.1 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.17 sec.
+Execute       db_write -model fft_stage.1 -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1.adb 
+Execute       db_write -model fft_stage.1 -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_stage.1 -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_stage.2 -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stage_2' pipeline 'butterfly_loop_dft_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.48 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.58 seconds; current allocated memory: 970.527 MB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.2 -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_fft_stage_2 
+Execute       gen_rtl fft_stage.2 -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_fft_stage_2 
+Execute       syn_report -csynth -model fft_stage.2 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_2_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.11 sec.
+Execute       syn_report -rtlxml -model fft_stage.2 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_2_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.2 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.16 sec.
+Execute       db_write -model fft_stage.2 -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2.adb 
+Execute       db_write -model fft_stage.2 -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_stage.2 -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_stage.3 -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stage_3' pipeline 'butterfly_loop_dft_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.42 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.53 seconds; current allocated memory: 970.527 MB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.3 -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_fft_stage_3 
+Execute       gen_rtl fft_stage.3 -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_fft_stage_3 
+Execute       syn_report -csynth -model fft_stage.3 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_3_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.11 sec.
+Execute       syn_report -rtlxml -model fft_stage.3 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_3_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.3 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.17 sec.
+Execute       db_write -model fft_stage.3 -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3.adb 
+Execute       db_write -model fft_stage.3 -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_stage.3 -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_stage.4 -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stage_4' pipeline 'butterfly_loop_dft_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.43 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.010 GB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.4 -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_fft_stage_4 
+Execute       gen_rtl fft_stage.4 -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_fft_stage_4 
+Execute       syn_report -csynth -model fft_stage.4 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_4_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model fft_stage.4 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_4_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.4 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.17 sec.
+Execute       db_write -model fft_stage.4 -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4.adb 
+Execute       db_write -model fft_stage.4 -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_stage.4 -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_stage.5 -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stage_5' pipeline 'butterfly_loop_dft_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 1.010 GB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.5 -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_fft_stage_5 
+Execute       gen_rtl fft_stage.5 -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_fft_stage_5 
+Execute       syn_report -csynth -model fft_stage.5 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_5_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model fft_stage.5 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_5_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.5 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.17 sec.
+Execute       db_write -model fft_stage.5 -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5.adb 
+Execute       db_write -model fft_stage.5 -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_stage.5 -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_stage.6 -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stage_6' pipeline 'butterfly_loop_dft_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 1.010 GB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.6 -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_fft_stage_6 
+Execute       gen_rtl fft_stage.6 -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_fft_stage_6 
+Execute       syn_report -csynth -model fft_stage.6 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_6_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model fft_stage.6 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_6_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.6 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.16 sec.
+Execute       db_write -model fft_stage.6 -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6.adb 
+Execute       db_write -model fft_stage.6 -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_stage.6 -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_stage.7 -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stage_7' pipeline 'butterfly_loop_dft_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 1.010 GB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.7 -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_fft_stage_7 
+Execute       gen_rtl fft_stage.7 -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_fft_stage_7 
+Execute       syn_report -csynth -model fft_stage.7 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_7_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model fft_stage.7 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_7_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.7 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.17 sec.
+Execute       db_write -model fft_stage.7 -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7.adb 
+Execute       db_write -model fft_stage.7 -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_stage.7 -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_stage.8 -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stage_8' pipeline 'butterfly_loop_dft_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 1.010 GB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.8 -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_fft_stage_8 
+Execute       gen_rtl fft_stage.8 -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_fft_stage_8 
+Execute       syn_report -csynth -model fft_stage.8 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_8_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model fft_stage.8 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_8_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.8 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.16 sec.
+Execute       db_write -model fft_stage.8 -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8.adb 
+Execute       db_write -model fft_stage.8 -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_stage.8 -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stage_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_stage.9 -top_prefix fft_streaming_ -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stage_9' pipeline 'butterfly_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_3_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stage_9'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.49 seconds; current allocated memory: 1.010 GB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_stage.9 -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming_fft_stage_9 
+Execute       gen_rtl fft_stage.9 -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming_fft_stage_9 
+Execute       syn_report -csynth -model fft_stage.9 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_9_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model fft_stage.9 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_stage_9_csynth.xml 
+Execute       syn_report -verbosereport -model fft_stage.9 -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.14 sec.
+Execute       db_write -model fft_stage.9 -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9.adb 
+Execute       db_write -model fft_stage.9 -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_stage.9 -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_streaming' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft_streaming -top_prefix  -sub_prefix fft_streaming_ -mg_file /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/X_R' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/X_I' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/OUT_R' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft_streaming/OUT_I' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft_streaming' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_streaming'.
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_Stage_R_RAM_AUTO_1R1W using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'fft_streaming_Stage_R_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-740] Implementing PIPO fft_streaming_Stage_R_1_RAM_AUTO_1R1W using a separate memory for each block
+INFO: [RTMG 210-278] Implementing memory 'fft_streaming_Stage_R_1_RAM_AUTO_1R1W_memcore' using auto RAMs.
+Command       create_rtl_model done; 0.17 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.54 seconds; current allocated memory: 1.010 GB.
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft_streaming -istop -style xilinx -f -lang vhdl -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/vhdl/fft_streaming 
+Command       gen_rtl done; 0.14 sec.
+Execute       gen_rtl fft_streaming -istop -style xilinx -f -lang vlog -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/verilog/fft_streaming 
+Execute       syn_report -csynth -model fft_streaming -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_streaming_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model fft_streaming -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/fft_streaming_csynth.xml 
+Execute       syn_report -verbosereport -model fft_streaming -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.88 sec.
+Execute       db_write -model fft_streaming -f -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.adb 
+Execute       db_write -model fft_streaming -bindview -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft_streaming -p /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming 
+Execute       export_constraint_db -f -tool general -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.constraint.tcl 
+Execute       syn_report -designview -model fft_streaming -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.design.xml 
+Command       syn_report done; 0.84 sec.
+Execute       syn_report -csynthDesign -model fft_streaming -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -wcfg -model fft_streaming -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model fft_streaming -o /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.protoinst 
+Execute       sc_get_clocks fft_streaming 
+Execute       sc_get_portdomain fft_streaming 
+INFO-FLOW: Model list for RTL component generation: bit_reverse fft_stage fft_stage.1 fft_stage.2 fft_stage.3 fft_stage.4 fft_stage.5 fft_stage.6 fft_stage.7 fft_stage.8 fft_stage.9 fft_streaming
+INFO-FLOW: Handling components in module [bit_reverse] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_flow_control_loop_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_pipe
+INFO-FLOW: Handling components in module [fft_stage] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_fsub_32ns_32ns_32_3_full_dsp_1.
+INFO-FLOW: Append model fft_streaming_fsub_32ns_32ns_32_3_full_dsp_1
+INFO-FLOW: Found component fft_streaming_fadd_32ns_32ns_32_3_full_dsp_1.
+INFO-FLOW: Append model fft_streaming_fadd_32ns_32ns_32_3_full_dsp_1
+INFO-FLOW: Found component fft_streaming_fmul_32ns_32ns_32_2_max_dsp_1.
+INFO-FLOW: Append model fft_streaming_fmul_32ns_32ns_32_2_max_dsp_1
+INFO-FLOW: Found component fft_streaming_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: Handling components in module [fft_stage_1] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_fft_stage_1_W_real_ROM_AUTO_1R.
+INFO-FLOW: Append model fft_streaming_fft_stage_1_W_real_ROM_AUTO_1R
+INFO-FLOW: Found component fft_streaming_fft_stage_1_W_imag_ROM_AUTO_1R.
+INFO-FLOW: Append model fft_streaming_fft_stage_1_W_imag_ROM_AUTO_1R
+INFO-FLOW: Found component fft_streaming_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: Handling components in module [fft_stage_2] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: Handling components in module [fft_stage_3] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: Handling components in module [fft_stage_4] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: Handling components in module [fft_stage_5] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: Handling components in module [fft_stage_6] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: Handling components in module [fft_stage_7] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: Handling components in module [fft_stage_8] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: Handling components in module [fft_stage_9] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_flow_control_loop_delay_pipe.
+INFO-FLOW: Append model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: Handling components in module [fft_streaming] ... 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.compgen.tcl 
+INFO-FLOW: Found component fft_streaming_Stage_R_RAM_AUTO_1R1W_memcore.
+INFO-FLOW: Append model fft_streaming_Stage_R_RAM_AUTO_1R1W_memcore
+INFO-FLOW: Found component fft_streaming_Stage_R_RAM_AUTO_1R1W.
+INFO-FLOW: Append model fft_streaming_Stage_R_RAM_AUTO_1R1W
+INFO-FLOW: Found component fft_streaming_Stage_R_1_RAM_AUTO_1R1W_memcore.
+INFO-FLOW: Append model fft_streaming_Stage_R_1_RAM_AUTO_1R1W_memcore
+INFO-FLOW: Found component fft_streaming_Stage_R_1_RAM_AUTO_1R1W.
+INFO-FLOW: Append model fft_streaming_Stage_R_1_RAM_AUTO_1R1W
+INFO-FLOW: Append model bit_reverse
+INFO-FLOW: Append model fft_stage
+INFO-FLOW: Append model fft_stage_1
+INFO-FLOW: Append model fft_stage_2
+INFO-FLOW: Append model fft_stage_3
+INFO-FLOW: Append model fft_stage_4
+INFO-FLOW: Append model fft_stage_5
+INFO-FLOW: Append model fft_stage_6
+INFO-FLOW: Append model fft_stage_7
+INFO-FLOW: Append model fft_stage_8
+INFO-FLOW: Append model fft_stage_9
+INFO-FLOW: Append model fft_streaming
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: fft_streaming_flow_control_loop_pipe fft_streaming_fsub_32ns_32ns_32_3_full_dsp_1 fft_streaming_fadd_32ns_32ns_32_3_full_dsp_1 fft_streaming_fmul_32ns_32ns_32_2_max_dsp_1 fft_streaming_flow_control_loop_delay_pipe fft_streaming_fft_stage_1_W_real_ROM_AUTO_1R fft_streaming_fft_stage_1_W_imag_ROM_AUTO_1R fft_streaming_flow_control_loop_delay_pipe fft_streaming_flow_control_loop_delay_pipe fft_streaming_flow_control_loop_delay_pipe fft_streaming_flow_control_loop_delay_pipe fft_streaming_flow_control_loop_delay_pipe fft_streaming_flow_control_loop_delay_pipe fft_streaming_flow_control_loop_delay_pipe fft_streaming_flow_control_loop_delay_pipe fft_streaming_flow_control_loop_delay_pipe fft_streaming_Stage_R_RAM_AUTO_1R1W_memcore fft_streaming_Stage_R_RAM_AUTO_1R1W fft_streaming_Stage_R_1_RAM_AUTO_1R1W_memcore fft_streaming_Stage_R_1_RAM_AUTO_1R1W bit_reverse fft_stage fft_stage_1 fft_stage_2 fft_stage_3 fft_stage_4 fft_stage_5 fft_stage_6 fft_stage_7 fft_stage_8 fft_stage_9 fft_streaming
+INFO-FLOW: Generating /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_pipe
+INFO-FLOW: To file: write model fft_streaming_fsub_32ns_32ns_32_3_full_dsp_1
+INFO-FLOW: To file: write model fft_streaming_fadd_32ns_32ns_32_3_full_dsp_1
+INFO-FLOW: To file: write model fft_streaming_fmul_32ns_32ns_32_2_max_dsp_1
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: To file: write model fft_streaming_fft_stage_1_W_real_ROM_AUTO_1R
+INFO-FLOW: To file: write model fft_streaming_fft_stage_1_W_imag_ROM_AUTO_1R
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: To file: write model fft_streaming_flow_control_loop_delay_pipe
+INFO-FLOW: To file: write model fft_streaming_Stage_R_RAM_AUTO_1R1W_memcore
+INFO-FLOW: To file: write model fft_streaming_Stage_R_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model fft_streaming_Stage_R_1_RAM_AUTO_1R1W_memcore
+INFO-FLOW: To file: write model fft_streaming_Stage_R_1_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model bit_reverse
+INFO-FLOW: To file: write model fft_stage
+INFO-FLOW: To file: write model fft_stage_1
+INFO-FLOW: To file: write model fft_stage_2
+INFO-FLOW: To file: write model fft_stage_3
+INFO-FLOW: To file: write model fft_stage_4
+INFO-FLOW: To file: write model fft_stage_5
+INFO-FLOW: To file: write model fft_stage_6
+INFO-FLOW: To file: write model fft_stage_7
+INFO-FLOW: To file: write model fft_stage_8
+INFO-FLOW: To file: write model fft_stage_9
+INFO-FLOW: To file: write model fft_streaming
+INFO-FLOW: Generating /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/global.setting.tcl
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /ecelib/eceware/xilinx_2022.2/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/vhdl' dstVlogDir='/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/vlog' tclDir='/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db' modelList='fft_streaming_flow_control_loop_pipe
+fft_streaming_fsub_32ns_32ns_32_3_full_dsp_1
+fft_streaming_fadd_32ns_32ns_32_3_full_dsp_1
+fft_streaming_fmul_32ns_32ns_32_2_max_dsp_1
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_fft_stage_1_W_real_ROM_AUTO_1R
+fft_streaming_fft_stage_1_W_imag_ROM_AUTO_1R
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_Stage_R_RAM_AUTO_1R1W_memcore
+fft_streaming_Stage_R_RAM_AUTO_1R1W
+fft_streaming_Stage_R_1_RAM_AUTO_1R1W_memcore
+fft_streaming_Stage_R_1_RAM_AUTO_1R1W
+bit_reverse
+fft_stage
+fft_stage_1
+fft_stage_2
+fft_stage_3
+fft_stage_4
+fft_stage_5
+fft_stage_6
+fft_stage_7
+fft_stage_8
+fft_stage_9
+fft_streaming
+' expOnly='0'
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data names -quiet 
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info -quiet 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9.compgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.compgen.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2.3 seconds. CPU system time: 0.17 seconds. Elapsed time: 3.17 seconds; current allocated memory: 1.010 GB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='fft_streaming_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='fft_streaming_flow_control_loop_pipe
+fft_streaming_fsub_32ns_32ns_32_3_full_dsp_1
+fft_streaming_fadd_32ns_32ns_32_3_full_dsp_1
+fft_streaming_fmul_32ns_32ns_32_2_max_dsp_1
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_fft_stage_1_W_real_ROM_AUTO_1R
+fft_streaming_fft_stage_1_W_imag_ROM_AUTO_1R
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_flow_control_loop_delay_pipe
+fft_streaming_Stage_R_RAM_AUTO_1R1W_memcore
+fft_streaming_Stage_R_RAM_AUTO_1R1W
+fft_streaming_Stage_R_1_RAM_AUTO_1R1W_memcore
+fft_streaming_Stage_R_1_RAM_AUTO_1R1W
+bit_reverse
+fft_stage
+fft_stage_1
+fft_stage_2
+fft_stage_3
+fft_stage_4
+fft_stage_5
+fft_stage_6
+fft_stage_7
+fft_stage_8
+fft_stage_9
+fft_streaming
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.rtl_wrap.cfg.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.compgen.dataonly.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/bit_reverse.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_1.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_2.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_3.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_4.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_5.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_6.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_7.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_8.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_stage_9.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.tbgen.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data names -quiet 
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info -quiet 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_streaming.constraint.tcl 
+Execute       sc_get_clocks fft_streaming 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/impl/misc/fft_streaming_fadd_32ns_32ns_32_3_full_dsp_1_ip.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/impl/misc/fft_streaming_fmul_32ns_32ns_32_2_max_dsp_1_ip.tcl 
+Execute       source /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/impl/misc/fft_streaming_fsub_32ns_32ns_32_3_full_dsp_1_ip.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST fft_streaming MODULE2INSTS {fft_streaming fft_streaming bit_reverse bit_reverse_U0 fft_stage fft_stage_U0 fft_stage_1 fft_stage_1_U0 fft_stage_2 fft_stage_2_U0 fft_stage_3 fft_stage_3_U0 fft_stage_4 fft_stage_4_U0 fft_stage_5 fft_stage_5_U0 fft_stage_6 fft_stage_6_U0 fft_stage_7 fft_stage_7_U0 fft_stage_8 fft_stage_8_U0 fft_stage_9 fft_stage_9_U0} INST2MODULE {fft_streaming fft_streaming bit_reverse_U0 bit_reverse fft_stage_U0 fft_stage fft_stage_1_U0 fft_stage_1 fft_stage_2_U0 fft_stage_2 fft_stage_3_U0 fft_stage_3 fft_stage_4_U0 fft_stage_4 fft_stage_5_U0 fft_stage_5 fft_stage_6_U0 fft_stage_6 fft_stage_7_U0 fft_stage_7 fft_stage_8_U0 fft_stage_8 fft_stage_9_U0 fft_stage_9} INSTDATA {fft_streaming {DEPTH 1 CHILDREN {bit_reverse_U0 fft_stage_U0 fft_stage_1_U0 fft_stage_2_U0 fft_stage_3_U0 fft_stage_4_U0 fft_stage_5_U0 fft_stage_6_U0 fft_stage_7_U0 fft_stage_8_U0 fft_stage_9_U0}} bit_reverse_U0 {DEPTH 2 CHILDREN {}} fft_stage_U0 {DEPTH 2 CHILDREN {}} fft_stage_1_U0 {DEPTH 2 CHILDREN {}} fft_stage_2_U0 {DEPTH 2 CHILDREN {}} fft_stage_3_U0 {DEPTH 2 CHILDREN {}} fft_stage_4_U0 {DEPTH 2 CHILDREN {}} fft_stage_5_U0 {DEPTH 2 CHILDREN {}} fft_stage_6_U0 {DEPTH 2 CHILDREN {}} fft_stage_7_U0 {DEPTH 2 CHILDREN {}} fft_stage_8_U0 {DEPTH 2 CHILDREN {}} fft_stage_9_U0 {DEPTH 2 CHILDREN {}}} MODULEDATA {bit_reverse {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln20_fu_154_p2 SOURCE fft_baseline/fft.cpp:20 VARIABLE add_ln20 LOOP VITIS_LOOP_20_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} fft_stage {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_190_p2 SOURCE fft_baseline/fft.cpp:46 VARIABLE add_ln46 LOOP dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U11 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul1 LOOP dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U5 SOURCE fft_baseline/fft.cpp:54 VARIABLE temp_R LOOP dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U12 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul LOOP dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U6 SOURCE fft_baseline/fft.cpp:55 VARIABLE temp_I LOOP dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U7 SOURCE fft_baseline/fft.cpp:56 VARIABLE sub LOOP dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U8 SOURCE fft_baseline/fft.cpp:57 VARIABLE sub1 LOOP dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U9 SOURCE fft_baseline/fft.cpp:58 VARIABLE add LOOP dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U10 SOURCE fft_baseline/fft.cpp:59 VARIABLE add1 LOOP dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}}} AREA {DSP 18 BRAM 0 URAM 0}} fft_stage_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_fu_283_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_8_fu_306_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43_8 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_358_p2 SOURCE fft_baseline/fft.cpp:53 VARIABLE add_ln53 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U26 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul7 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U27 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul8 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U20 SOURCE fft_baseline/fft.cpp:54 VARIABLE temp_R LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U28 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul9 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U29 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U21 SOURCE fft_baseline/fft.cpp:55 VARIABLE temp_I LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U22 SOURCE fft_baseline/fft.cpp:56 VARIABLE sub LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U23 SOURCE fft_baseline/fft.cpp:57 VARIABLE sub9 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U24 SOURCE fft_baseline/fft.cpp:58 VARIABLE add LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U25 SOURCE fft_baseline/fft.cpp:59 VARIABLE add9 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_370_p2 SOURCE fft_baseline/fft.cpp:46 VARIABLE add_ln46 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_real_U SOURCE {} VARIABLE W_real LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_imag_U SOURCE {} VARIABLE W_imag LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 2 URAM 0}} fft_stage_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_fu_283_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_7_fu_306_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43_7 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_358_p2 SOURCE fft_baseline/fft.cpp:53 VARIABLE add_ln53 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U42 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul4 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U43 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul5 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U36 SOURCE fft_baseline/fft.cpp:54 VARIABLE temp_R LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U44 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U45 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul6 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U37 SOURCE fft_baseline/fft.cpp:55 VARIABLE temp_I LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U38 SOURCE fft_baseline/fft.cpp:56 VARIABLE sub LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U39 SOURCE fft_baseline/fft.cpp:57 VARIABLE sub8 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U40 SOURCE fft_baseline/fft.cpp:58 VARIABLE add LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U41 SOURCE fft_baseline/fft.cpp:59 VARIABLE add8 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_370_p2 SOURCE fft_baseline/fft.cpp:46 VARIABLE add_ln46 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_real9_U SOURCE {} VARIABLE W_real9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_imag1_U SOURCE {} VARIABLE W_imag1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 2 URAM 0}} fft_stage_3 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_fu_283_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_6_fu_306_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43_6 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_358_p2 SOURCE fft_baseline/fft.cpp:53 VARIABLE add_ln53 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U56 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul1 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U57 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul2 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U50 SOURCE fft_baseline/fft.cpp:54 VARIABLE temp_R LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U58 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U59 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul3 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U51 SOURCE fft_baseline/fft.cpp:55 VARIABLE temp_I LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U52 SOURCE fft_baseline/fft.cpp:56 VARIABLE sub LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U53 SOURCE fft_baseline/fft.cpp:57 VARIABLE sub7 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U54 SOURCE fft_baseline/fft.cpp:58 VARIABLE add LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U55 SOURCE fft_baseline/fft.cpp:59 VARIABLE add7 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_370_p2 SOURCE fft_baseline/fft.cpp:46 VARIABLE add_ln46 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_real10_U SOURCE {} VARIABLE W_real10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_imag2_U SOURCE {} VARIABLE W_imag2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 2 URAM 0}} fft_stage_4 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_fu_281_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_5_fu_304_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43_5 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_356_p2 SOURCE fft_baseline/fft.cpp:53 VARIABLE add_ln53 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U70 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul7 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U71 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul8 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U64 SOURCE fft_baseline/fft.cpp:54 VARIABLE temp_R LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U72 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U73 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul9 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U65 SOURCE fft_baseline/fft.cpp:55 VARIABLE temp_I LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U66 SOURCE fft_baseline/fft.cpp:56 VARIABLE sub LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U67 SOURCE fft_baseline/fft.cpp:57 VARIABLE sub6 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U68 SOURCE fft_baseline/fft.cpp:58 VARIABLE add LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U69 SOURCE fft_baseline/fft.cpp:59 VARIABLE add6 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_368_p2 SOURCE fft_baseline/fft.cpp:46 VARIABLE add_ln46 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_real11_U SOURCE {} VARIABLE W_real11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_imag3_U SOURCE {} VARIABLE W_imag3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 2 URAM 0}} fft_stage_5 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_fu_283_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_4_fu_306_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43_4 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_358_p2 SOURCE fft_baseline/fft.cpp:53 VARIABLE add_ln53 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U84 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul4 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U85 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U78 SOURCE fft_baseline/fft.cpp:54 VARIABLE temp_R LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U86 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul5 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U87 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul6 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U79 SOURCE fft_baseline/fft.cpp:55 VARIABLE temp_I LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U80 SOURCE fft_baseline/fft.cpp:56 VARIABLE sub LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U81 SOURCE fft_baseline/fft.cpp:57 VARIABLE sub5 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U82 SOURCE fft_baseline/fft.cpp:58 VARIABLE add LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U83 SOURCE fft_baseline/fft.cpp:59 VARIABLE add5 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_370_p2 SOURCE fft_baseline/fft.cpp:46 VARIABLE add_ln46 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_real12_U SOURCE {} VARIABLE W_real12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_imag4_U SOURCE {} VARIABLE W_imag4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 2 URAM 0}} fft_stage_6 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_fu_283_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_3_fu_306_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43_3 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_358_p2 SOURCE fft_baseline/fft.cpp:53 VARIABLE add_ln53 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U98 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U99 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul1 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U92 SOURCE fft_baseline/fft.cpp:54 VARIABLE temp_R LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U100 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul2 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U101 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul3 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U93 SOURCE fft_baseline/fft.cpp:55 VARIABLE temp_I LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U94 SOURCE fft_baseline/fft.cpp:56 VARIABLE sub LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U95 SOURCE fft_baseline/fft.cpp:57 VARIABLE sub4 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U96 SOURCE fft_baseline/fft.cpp:58 VARIABLE add LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U97 SOURCE fft_baseline/fft.cpp:59 VARIABLE add4 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_370_p2 SOURCE fft_baseline/fft.cpp:46 VARIABLE add_ln46 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_real13_U SOURCE {} VARIABLE W_real13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_imag5_U SOURCE {} VARIABLE W_imag5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 2 URAM 0}} fft_stage_7 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_fu_283_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_2_fu_306_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43_2 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_358_p2 SOURCE fft_baseline/fft.cpp:53 VARIABLE add_ln53 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U112 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U113 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul7 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U106 SOURCE fft_baseline/fft.cpp:54 VARIABLE temp_R LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U114 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul8 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U115 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul9 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U107 SOURCE fft_baseline/fft.cpp:55 VARIABLE temp_I LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U108 SOURCE fft_baseline/fft.cpp:56 VARIABLE sub LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U109 SOURCE fft_baseline/fft.cpp:57 VARIABLE sub3 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U110 SOURCE fft_baseline/fft.cpp:58 VARIABLE add LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U111 SOURCE fft_baseline/fft.cpp:59 VARIABLE add3 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_370_p2 SOURCE fft_baseline/fft.cpp:46 VARIABLE add_ln46 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_real14_U SOURCE {} VARIABLE W_real14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_imag6_U SOURCE {} VARIABLE W_imag6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 2 URAM 0}} fft_stage_8 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_fu_268_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_1_fu_294_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43_1 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_350_p2 SOURCE fft_baseline/fft.cpp:53 VARIABLE add_ln53 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U126 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U127 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul4 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U120 SOURCE fft_baseline/fft.cpp:54 VARIABLE temp_R LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U128 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul5 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U129 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul6 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U121 SOURCE fft_baseline/fft.cpp:55 VARIABLE temp_I LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U122 SOURCE fft_baseline/fft.cpp:56 VARIABLE sub LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U123 SOURCE fft_baseline/fft.cpp:57 VARIABLE sub2 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U124 SOURCE fft_baseline/fft.cpp:58 VARIABLE add LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U125 SOURCE fft_baseline/fft.cpp:59 VARIABLE add2 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_362_p2 SOURCE fft_baseline/fft.cpp:46 VARIABLE add_ln46 LOOP butterfly_loop_dft_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_real15_U SOURCE {} VARIABLE W_real15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_imag7_U SOURCE {} VARIABLE W_imag7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 2 URAM 0}} fft_stage_9 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_fu_236_p2 SOURCE fft_baseline/fft.cpp:43 VARIABLE add_ln43 LOOP butterfly_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U140 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul LOOP butterfly_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U141 SOURCE fft_baseline/fft.cpp:54 VARIABLE mul1 LOOP butterfly_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U134 SOURCE fft_baseline/fft.cpp:54 VARIABLE temp_R LOOP butterfly_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U142 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul2 LOOP butterfly_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U143 SOURCE fft_baseline/fft.cpp:55 VARIABLE mul3 LOOP butterfly_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U135 SOURCE fft_baseline/fft.cpp:55 VARIABLE temp_I LOOP butterfly_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U136 SOURCE fft_baseline/fft.cpp:56 VARIABLE sub LOOP butterfly_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_3_full_dsp_1_U137 SOURCE fft_baseline/fft.cpp:57 VARIABLE sub1 LOOP butterfly_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U138 SOURCE fft_baseline/fft.cpp:58 VARIABLE add LOOP butterfly_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 2 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_3_full_dsp_1_U139 SOURCE fft_baseline/fft.cpp:59 VARIABLE add1 LOOP butterfly_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_real16_U SOURCE {} VARIABLE W_real16 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME W_imag8_U SOURCE {} VARIABLE W_imag8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 24 BRAM 2 URAM 0}} fft_streaming {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME Stage_R_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_R LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_s2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_R_1_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_R_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_R_2_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_R_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_R_3_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_R_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_R_4_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_R_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_R_5_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_R_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_R_6_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_R_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_R_7_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_R_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_R_8_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_R_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_R_9_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_R_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME Stage_I_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_I LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_s2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_I_1_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_I_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_I_2_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_I_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_I_3_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_I_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_I_4_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_I_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_I_5_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_I_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_I_6_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_I_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_I_7_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_I_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_I_8_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_I_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_t2p PRAGMA {} RTLNAME Stage_I_9_U SOURCE fft_baseline/fft.cpp:67 VARIABLE Stage_I_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_t2p}}} AREA {DSP 234 BRAM 98 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.77 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.93 seconds; current allocated memory: 1.010 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fft_streaming.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft_streaming.
+Execute       syn_report -model fft_streaming -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.04 MHz
+Command     autosyn done; 17.1 sec.
+Command   csynth_design done; 29.09 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 21.81 seconds. CPU system time: 3 seconds. Elapsed time: 29.09 seconds; current allocated memory: 192.000 MB.
+Command ap_source done; 43.56 sec.
+Execute cleanup_all 

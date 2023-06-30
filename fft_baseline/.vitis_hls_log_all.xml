@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'bit_reverse' (loop 'VITIS_LOOP_20_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('OUT_I_addr_2_write_ln31', fft_baseline/fft.cpp:31) of variable 'temp', fft_baseline/fft.cpp:29 on array 'OUT_I' and 'store' operation ('OUT_I_addr_write_ln30', fft_baseline/fft.cpp:30) of variable 'bitcast_ln30', fft_baseline/fft.cpp:30 on array 'OUT_I'.&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html" projectName="fft_baseline" solutionName="solution1" date="2023-06-30T11:19:33.708-0700" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

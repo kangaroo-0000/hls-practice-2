@@ -1,0 +1,7 @@
+<pragmas>
+<pragma file="fft_baseline/fft.cpp" line="66" pragmaType="dataflow" parentfunction="fft_streaming" disable_start_propagation="0"/>
+<pragma file="fft_baseline/fft.cpp" line="74" pragmaType="unroll" parentfunction="fft_streaming" factor="-1" skip_exit_check="0"/>
+<pragma file="fft_baseline/fft.cpp" line="68" pragmaType="array_partition" parentfunction="fft_streaming" dim="1" factor="0" mode="complete" dynamic="0" variable="Stage_R"/>
+<pragma file="fft_baseline/fft.cpp" line="69" pragmaType="array_partition" parentfunction="fft_streaming" dim="1" factor="0" mode="complete" dynamic="0" variable="Stage_I"/>
+<pragma file="fft_baseline/fft.cpp" line="49" pragmaType="pipeline" parentfunction="fft_stage" off="0" ii="-1" rewind="0" style=""/>
+</pragmas>

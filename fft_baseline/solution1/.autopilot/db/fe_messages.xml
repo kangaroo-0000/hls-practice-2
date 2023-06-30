@@ -1,0 +1,34 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="fft_baseline/fft.cpp:66:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fft_baseline/fft.cpp:49:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fft_stage" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/csynth.tcl:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="fft_streaming" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=fft_streaming" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fft_baseline/fft.cpp:66:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fft_streaming" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fft_baseline/fft.cpp:68:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fft_streaming" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Stage_R dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fft_baseline/fft.cpp:69:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fft_streaming" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Stage_I dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fft_baseline/fft.cpp:74:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fft_streaming" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fft_baseline/fft.cpp:65:0" msg_body="Unrolling loop 'stage_loop' (fft_baseline/fft.cpp:73:3) in function 'fft_streaming' completely with a factor of 9">
+        <args Factor="9" LoopLoc="fft_baseline/fft.cpp:73:3" LoopName="stage_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="fft_baseline/fft.cpp:15:0" msg_body="Inlining function 'reverse_bits(unsigned int)' into 'bit_reverse(float*, float*, float*, float*)'">
+        <args Callee="reverse_bits(unsigned int)" Caller="bit_reverse(float*, float*, float*, float*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="fft_baseline/fft.cpp:67:8" msg_body="Applying array_partition to 'Stage_R': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="Stage_R"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="fft_baseline/fft.cpp:67:27" msg_body="Applying array_partition to 'Stage_I': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="Stage_I"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

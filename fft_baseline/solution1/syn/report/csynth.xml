@@ -1,0 +1,1995 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcvu11p-flga2577-1-e</Part>
+        <TopModelName>fft_streaming</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>dataflow</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>7280</Best-caseLatency>
+            <Average-caseLatency>7280</Average-caseLatency>
+            <Worst-caseLatency>7280</Worst-caseLatency>
+            <Best-caseRealTimeLatency>72.800 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>72.800 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>72.800 us</Worst-caseRealTimeLatency>
+            <DataflowPipelineThroughput>2051</DataflowPipelineThroughput>
+            <Interval-min>2051</Interval-min>
+            <Interval-max>2051</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>98</BRAM_18K>
+            <DSP>234</DSP>
+            <FF>22126</FF>
+            <LUT>19716</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9216</DSP>
+            <FF>2592000</FF>
+            <LUT>1296000</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>fft_streaming</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>fft_streaming</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>fft_streaming</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>fft_streaming</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>fft_streaming</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>fft_streaming</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_R_address0</name>
+            <Object>X_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_R_ce0</name>
+            <Object>X_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_R_d0</name>
+            <Object>X_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_R_q0</name>
+            <Object>X_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_R_we0</name>
+            <Object>X_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_R_address1</name>
+            <Object>X_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_R_ce1</name>
+            <Object>X_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_R_d1</name>
+            <Object>X_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_R_q1</name>
+            <Object>X_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_R_we1</name>
+            <Object>X_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_I_address0</name>
+            <Object>X_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_I_ce0</name>
+            <Object>X_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_I_d0</name>
+            <Object>X_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_I_q0</name>
+            <Object>X_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_I_we0</name>
+            <Object>X_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_I_address1</name>
+            <Object>X_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_I_ce1</name>
+            <Object>X_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_I_d1</name>
+            <Object>X_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_I_q1</name>
+            <Object>X_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X_I_we1</name>
+            <Object>X_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_R_address0</name>
+            <Object>OUT_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_R_ce0</name>
+            <Object>OUT_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_R_d0</name>
+            <Object>OUT_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_R_q0</name>
+            <Object>OUT_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_R_we0</name>
+            <Object>OUT_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_R_address1</name>
+            <Object>OUT_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_R_ce1</name>
+            <Object>OUT_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_R_d1</name>
+            <Object>OUT_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_R_q1</name>
+            <Object>OUT_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_R_we1</name>
+            <Object>OUT_R</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_I_address0</name>
+            <Object>OUT_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_I_ce0</name>
+            <Object>OUT_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_I_d0</name>
+            <Object>OUT_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_I_q0</name>
+            <Object>OUT_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_I_we0</name>
+            <Object>OUT_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_I_address1</name>
+            <Object>OUT_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>10</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_I_ce1</name>
+            <Object>OUT_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_I_d1</name>
+            <Object>OUT_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_I_q1</name>
+            <Object>OUT_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>OUT_I_we1</name>
+            <Object>OUT_I</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>fft_streaming</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>bit_reverse_U0</InstName>
+                    <ModuleName>bit_reverse</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>166</ID>
+                    <BindInstances>add_ln20_fu_154_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fft_stage_U0</InstName>
+                    <ModuleName>fft_stage</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>178</ID>
+                    <BindInstances>add_ln46_fu_190_p2 fmul_32ns_32ns_32_2_max_dsp_1_U11 fsub_32ns_32ns_32_3_full_dsp_1_U5 fmul_32ns_32ns_32_2_max_dsp_1_U12 fadd_32ns_32ns_32_3_full_dsp_1_U6 fsub_32ns_32ns_32_3_full_dsp_1_U7 fsub_32ns_32ns_32_3_full_dsp_1_U8 fadd_32ns_32ns_32_3_full_dsp_1_U9 fadd_32ns_32ns_32_3_full_dsp_1_U10</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fft_stage_1_U0</InstName>
+                    <ModuleName>fft_stage_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>186</ID>
+                    <BindInstances>add_ln43_fu_283_p2 add_ln43_8_fu_306_p2 add_ln53_fu_358_p2 fmul_32ns_32ns_32_2_max_dsp_1_U26 fmul_32ns_32ns_32_2_max_dsp_1_U27 fsub_32ns_32ns_32_3_full_dsp_1_U20 fmul_32ns_32ns_32_2_max_dsp_1_U28 fmul_32ns_32ns_32_2_max_dsp_1_U29 fadd_32ns_32ns_32_3_full_dsp_1_U21 fsub_32ns_32ns_32_3_full_dsp_1_U22 fsub_32ns_32ns_32_3_full_dsp_1_U23 fadd_32ns_32ns_32_3_full_dsp_1_U24 fadd_32ns_32ns_32_3_full_dsp_1_U25 add_ln46_fu_370_p2 W_real_U W_imag_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fft_stage_2_U0</InstName>
+                    <ModuleName>fft_stage_2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>198</ID>
+                    <BindInstances>add_ln43_fu_283_p2 add_ln43_7_fu_306_p2 add_ln53_fu_358_p2 fmul_32ns_32ns_32_2_max_dsp_1_U42 fmul_32ns_32ns_32_2_max_dsp_1_U43 fsub_32ns_32ns_32_3_full_dsp_1_U36 fmul_32ns_32ns_32_2_max_dsp_1_U44 fmul_32ns_32ns_32_2_max_dsp_1_U45 fadd_32ns_32ns_32_3_full_dsp_1_U37 fsub_32ns_32ns_32_3_full_dsp_1_U38 fsub_32ns_32ns_32_3_full_dsp_1_U39 fadd_32ns_32ns_32_3_full_dsp_1_U40 fadd_32ns_32ns_32_3_full_dsp_1_U41 add_ln46_fu_370_p2 W_real9_U W_imag1_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fft_stage_3_U0</InstName>
+                    <ModuleName>fft_stage_3</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>210</ID>
+                    <BindInstances>add_ln43_fu_283_p2 add_ln43_6_fu_306_p2 add_ln53_fu_358_p2 fmul_32ns_32ns_32_2_max_dsp_1_U56 fmul_32ns_32ns_32_2_max_dsp_1_U57 fsub_32ns_32ns_32_3_full_dsp_1_U50 fmul_32ns_32ns_32_2_max_dsp_1_U58 fmul_32ns_32ns_32_2_max_dsp_1_U59 fadd_32ns_32ns_32_3_full_dsp_1_U51 fsub_32ns_32ns_32_3_full_dsp_1_U52 fsub_32ns_32ns_32_3_full_dsp_1_U53 fadd_32ns_32ns_32_3_full_dsp_1_U54 fadd_32ns_32ns_32_3_full_dsp_1_U55 add_ln46_fu_370_p2 W_real10_U W_imag2_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fft_stage_4_U0</InstName>
+                    <ModuleName>fft_stage_4</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>222</ID>
+                    <BindInstances>add_ln43_fu_281_p2 add_ln43_5_fu_304_p2 add_ln53_fu_356_p2 fmul_32ns_32ns_32_2_max_dsp_1_U70 fmul_32ns_32ns_32_2_max_dsp_1_U71 fsub_32ns_32ns_32_3_full_dsp_1_U64 fmul_32ns_32ns_32_2_max_dsp_1_U72 fmul_32ns_32ns_32_2_max_dsp_1_U73 fadd_32ns_32ns_32_3_full_dsp_1_U65 fsub_32ns_32ns_32_3_full_dsp_1_U66 fsub_32ns_32ns_32_3_full_dsp_1_U67 fadd_32ns_32ns_32_3_full_dsp_1_U68 fadd_32ns_32ns_32_3_full_dsp_1_U69 add_ln46_fu_368_p2 W_real11_U W_imag3_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fft_stage_5_U0</InstName>
+                    <ModuleName>fft_stage_5</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>234</ID>
+                    <BindInstances>add_ln43_fu_283_p2 add_ln43_4_fu_306_p2 add_ln53_fu_358_p2 fmul_32ns_32ns_32_2_max_dsp_1_U84 fmul_32ns_32ns_32_2_max_dsp_1_U85 fsub_32ns_32ns_32_3_full_dsp_1_U78 fmul_32ns_32ns_32_2_max_dsp_1_U86 fmul_32ns_32ns_32_2_max_dsp_1_U87 fadd_32ns_32ns_32_3_full_dsp_1_U79 fsub_32ns_32ns_32_3_full_dsp_1_U80 fsub_32ns_32ns_32_3_full_dsp_1_U81 fadd_32ns_32ns_32_3_full_dsp_1_U82 fadd_32ns_32ns_32_3_full_dsp_1_U83 add_ln46_fu_370_p2 W_real12_U W_imag4_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fft_stage_6_U0</InstName>
+                    <ModuleName>fft_stage_6</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>246</ID>
+                    <BindInstances>add_ln43_fu_283_p2 add_ln43_3_fu_306_p2 add_ln53_fu_358_p2 fmul_32ns_32ns_32_2_max_dsp_1_U98 fmul_32ns_32ns_32_2_max_dsp_1_U99 fsub_32ns_32ns_32_3_full_dsp_1_U92 fmul_32ns_32ns_32_2_max_dsp_1_U100 fmul_32ns_32ns_32_2_max_dsp_1_U101 fadd_32ns_32ns_32_3_full_dsp_1_U93 fsub_32ns_32ns_32_3_full_dsp_1_U94 fsub_32ns_32ns_32_3_full_dsp_1_U95 fadd_32ns_32ns_32_3_full_dsp_1_U96 fadd_32ns_32ns_32_3_full_dsp_1_U97 add_ln46_fu_370_p2 W_real13_U W_imag5_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fft_stage_7_U0</InstName>
+                    <ModuleName>fft_stage_7</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>258</ID>
+                    <BindInstances>add_ln43_fu_283_p2 add_ln43_2_fu_306_p2 add_ln53_fu_358_p2 fmul_32ns_32ns_32_2_max_dsp_1_U112 fmul_32ns_32ns_32_2_max_dsp_1_U113 fsub_32ns_32ns_32_3_full_dsp_1_U106 fmul_32ns_32ns_32_2_max_dsp_1_U114 fmul_32ns_32ns_32_2_max_dsp_1_U115 fadd_32ns_32ns_32_3_full_dsp_1_U107 fsub_32ns_32ns_32_3_full_dsp_1_U108 fsub_32ns_32ns_32_3_full_dsp_1_U109 fadd_32ns_32ns_32_3_full_dsp_1_U110 fadd_32ns_32ns_32_3_full_dsp_1_U111 add_ln46_fu_370_p2 W_real14_U W_imag6_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fft_stage_8_U0</InstName>
+                    <ModuleName>fft_stage_8</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>270</ID>
+                    <BindInstances>add_ln43_fu_268_p2 add_ln43_1_fu_294_p2 add_ln53_fu_350_p2 fmul_32ns_32ns_32_2_max_dsp_1_U126 fmul_32ns_32ns_32_2_max_dsp_1_U127 fsub_32ns_32ns_32_3_full_dsp_1_U120 fmul_32ns_32ns_32_2_max_dsp_1_U128 fmul_32ns_32ns_32_2_max_dsp_1_U129 fadd_32ns_32ns_32_3_full_dsp_1_U121 fsub_32ns_32ns_32_3_full_dsp_1_U122 fsub_32ns_32ns_32_3_full_dsp_1_U123 fadd_32ns_32ns_32_3_full_dsp_1_U124 fadd_32ns_32ns_32_3_full_dsp_1_U125 add_ln46_fu_362_p2 W_real15_U W_imag7_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>fft_stage_9_U0</InstName>
+                    <ModuleName>fft_stage_9</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>282</ID>
+                    <BindInstances>add_ln43_fu_236_p2 fmul_32ns_32ns_32_2_max_dsp_1_U140 fmul_32ns_32ns_32_2_max_dsp_1_U141 fsub_32ns_32ns_32_3_full_dsp_1_U134 fmul_32ns_32ns_32_2_max_dsp_1_U142 fmul_32ns_32ns_32_2_max_dsp_1_U143 fadd_32ns_32ns_32_3_full_dsp_1_U135 fsub_32ns_32ns_32_3_full_dsp_1_U136 fsub_32ns_32ns_32_3_full_dsp_1_U137 fadd_32ns_32ns_32_3_full_dsp_1_U138 fadd_32ns_32ns_32_3_full_dsp_1_U139 W_real16_U W_imag8_U</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>Stage_R_U Stage_R_1_U Stage_R_2_U Stage_R_3_U Stage_R_4_U Stage_R_5_U Stage_R_6_U Stage_R_7_U Stage_R_8_U Stage_R_9_U Stage_I_U Stage_I_1_U Stage_I_2_U Stage_I_3_U Stage_I_4_U Stage_I_5_U Stage_I_6_U Stage_I_7_U Stage_I_8_U Stage_I_9_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>bit_reverse</Name>
+            <Loops>
+                <VITIS_LOOP_20_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.594</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2050</Best-caseLatency>
+                    <Average-caseLatency>2050</Average-caseLatency>
+                    <Worst-caseLatency>2050</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>20.500 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>20.500 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>20.500 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2050</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_20_1>
+                        <Name>VITIS_LOOP_20_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>1024</TripCount>
+                        <Latency>2048</Latency>
+                        <AbsoluteTimeLatency>20.480 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_20_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>103</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>171</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln20_fu_154_p2" SOURCE="fft_baseline/fft.cpp:20" URAM="0" VARIABLE="add_ln20"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_stage</Name>
+            <Loops>
+                <dft_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>522</Best-caseLatency>
+                    <Average-caseLatency>522</Average-caseLatency>
+                    <Worst-caseLatency>522</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>522</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <dft_loop>
+                        <Name>dft_loop</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>512</TripCount>
+                        <Latency>520</Latency>
+                        <AbsoluteTimeLatency>5.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </dft_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>18</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2081</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1768</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_190_p2" SOURCE="fft_baseline/fft.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U11" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U5" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="temp_R"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U12" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U6" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="temp_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U7" SOURCE="fft_baseline/fft.cpp:56" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U8" SOURCE="fft_baseline/fft.cpp:57" URAM="0" VARIABLE="sub1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U9" SOURCE="fft_baseline/fft.cpp:58" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U10" SOURCE="fft_baseline/fft.cpp:59" URAM="0" VARIABLE="add1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_stage_1</Name>
+            <Loops>
+                <butterfly_loop_dft_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>522</Best-caseLatency>
+                    <Average-caseLatency>522</Average-caseLatency>
+                    <Worst-caseLatency>522</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>522</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <butterfly_loop_dft_loop>
+                        <Name>butterfly_loop_dft_loop</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>512</TripCount>
+                        <Latency>520</Latency>
+                        <AbsoluteTimeLatency>5.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </butterfly_loop_dft_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>2</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>24</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2223</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1957</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_283_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_8_fu_306_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_358_p2" SOURCE="fft_baseline/fft.cpp:53" URAM="0" VARIABLE="add_ln53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U26" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U27" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U20" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="temp_R"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U28" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U29" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U21" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="temp_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U22" SOURCE="fft_baseline/fft.cpp:56" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U23" SOURCE="fft_baseline/fft.cpp:57" URAM="0" VARIABLE="sub9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U24" SOURCE="fft_baseline/fft.cpp:58" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U25" SOURCE="fft_baseline/fft.cpp:59" URAM="0" VARIABLE="add9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_370_p2" SOURCE="fft_baseline/fft.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_real_U" SOURCE="" URAM="0" VARIABLE="W_real"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_imag_U" SOURCE="" URAM="0" VARIABLE="W_imag"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_stage_2</Name>
+            <Loops>
+                <butterfly_loop_dft_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>522</Best-caseLatency>
+                    <Average-caseLatency>522</Average-caseLatency>
+                    <Worst-caseLatency>522</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>522</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <butterfly_loop_dft_loop>
+                        <Name>butterfly_loop_dft_loop</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>512</TripCount>
+                        <Latency>520</Latency>
+                        <AbsoluteTimeLatency>5.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </butterfly_loop_dft_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>2</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>24</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2223</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1957</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_283_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_7_fu_306_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_358_p2" SOURCE="fft_baseline/fft.cpp:53" URAM="0" VARIABLE="add_ln53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U42" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U43" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U36" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="temp_R"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U44" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U45" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U37" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="temp_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U38" SOURCE="fft_baseline/fft.cpp:56" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U39" SOURCE="fft_baseline/fft.cpp:57" URAM="0" VARIABLE="sub8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U40" SOURCE="fft_baseline/fft.cpp:58" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U41" SOURCE="fft_baseline/fft.cpp:59" URAM="0" VARIABLE="add8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_370_p2" SOURCE="fft_baseline/fft.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_real9_U" SOURCE="" URAM="0" VARIABLE="W_real9"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_imag1_U" SOURCE="" URAM="0" VARIABLE="W_imag1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_stage_3</Name>
+            <Loops>
+                <butterfly_loop_dft_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>522</Best-caseLatency>
+                    <Average-caseLatency>522</Average-caseLatency>
+                    <Worst-caseLatency>522</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>522</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <butterfly_loop_dft_loop>
+                        <Name>butterfly_loop_dft_loop</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>512</TripCount>
+                        <Latency>520</Latency>
+                        <AbsoluteTimeLatency>5.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </butterfly_loop_dft_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>2</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>24</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2223</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1958</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_283_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_6_fu_306_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_358_p2" SOURCE="fft_baseline/fft.cpp:53" URAM="0" VARIABLE="add_ln53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U56" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U57" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U50" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="temp_R"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U58" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U59" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U51" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="temp_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U52" SOURCE="fft_baseline/fft.cpp:56" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U53" SOURCE="fft_baseline/fft.cpp:57" URAM="0" VARIABLE="sub7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U54" SOURCE="fft_baseline/fft.cpp:58" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U55" SOURCE="fft_baseline/fft.cpp:59" URAM="0" VARIABLE="add7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_370_p2" SOURCE="fft_baseline/fft.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_real10_U" SOURCE="" URAM="0" VARIABLE="W_real10"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_imag2_U" SOURCE="" URAM="0" VARIABLE="W_imag2"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_stage_4</Name>
+            <Loops>
+                <butterfly_loop_dft_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>522</Best-caseLatency>
+                    <Average-caseLatency>522</Average-caseLatency>
+                    <Worst-caseLatency>522</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>522</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <butterfly_loop_dft_loop>
+                        <Name>butterfly_loop_dft_loop</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>512</TripCount>
+                        <Latency>520</Latency>
+                        <AbsoluteTimeLatency>5.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </butterfly_loop_dft_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>2</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>24</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2223</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1956</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_281_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_5_fu_304_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_356_p2" SOURCE="fft_baseline/fft.cpp:53" URAM="0" VARIABLE="add_ln53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U70" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U71" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U64" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="temp_R"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U72" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U73" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U65" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="temp_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U66" SOURCE="fft_baseline/fft.cpp:56" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U67" SOURCE="fft_baseline/fft.cpp:57" URAM="0" VARIABLE="sub6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U68" SOURCE="fft_baseline/fft.cpp:58" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U69" SOURCE="fft_baseline/fft.cpp:59" URAM="0" VARIABLE="add6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_368_p2" SOURCE="fft_baseline/fft.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_real11_U" SOURCE="" URAM="0" VARIABLE="W_real11"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_imag3_U" SOURCE="" URAM="0" VARIABLE="W_imag3"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_stage_5</Name>
+            <Loops>
+                <butterfly_loop_dft_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>522</Best-caseLatency>
+                    <Average-caseLatency>522</Average-caseLatency>
+                    <Worst-caseLatency>522</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>522</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <butterfly_loop_dft_loop>
+                        <Name>butterfly_loop_dft_loop</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>512</TripCount>
+                        <Latency>520</Latency>
+                        <AbsoluteTimeLatency>5.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </butterfly_loop_dft_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>2</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>24</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2223</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1956</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_283_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_4_fu_306_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_358_p2" SOURCE="fft_baseline/fft.cpp:53" URAM="0" VARIABLE="add_ln53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U84" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U85" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U78" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="temp_R"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U86" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U87" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U79" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="temp_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U80" SOURCE="fft_baseline/fft.cpp:56" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U81" SOURCE="fft_baseline/fft.cpp:57" URAM="0" VARIABLE="sub5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U82" SOURCE="fft_baseline/fft.cpp:58" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U83" SOURCE="fft_baseline/fft.cpp:59" URAM="0" VARIABLE="add5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_370_p2" SOURCE="fft_baseline/fft.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_real12_U" SOURCE="" URAM="0" VARIABLE="W_real12"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_imag4_U" SOURCE="" URAM="0" VARIABLE="W_imag4"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_stage_6</Name>
+            <Loops>
+                <butterfly_loop_dft_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>522</Best-caseLatency>
+                    <Average-caseLatency>522</Average-caseLatency>
+                    <Worst-caseLatency>522</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>522</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <butterfly_loop_dft_loop>
+                        <Name>butterfly_loop_dft_loop</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>512</TripCount>
+                        <Latency>520</Latency>
+                        <AbsoluteTimeLatency>5.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </butterfly_loop_dft_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>2</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>24</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2223</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1956</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_283_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_3_fu_306_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_358_p2" SOURCE="fft_baseline/fft.cpp:53" URAM="0" VARIABLE="add_ln53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U98" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U99" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U92" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="temp_R"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U100" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U101" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U93" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="temp_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U94" SOURCE="fft_baseline/fft.cpp:56" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U95" SOURCE="fft_baseline/fft.cpp:57" URAM="0" VARIABLE="sub4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U96" SOURCE="fft_baseline/fft.cpp:58" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U97" SOURCE="fft_baseline/fft.cpp:59" URAM="0" VARIABLE="add4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_370_p2" SOURCE="fft_baseline/fft.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_real13_U" SOURCE="" URAM="0" VARIABLE="W_real13"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_imag5_U" SOURCE="" URAM="0" VARIABLE="W_imag5"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_stage_7</Name>
+            <Loops>
+                <butterfly_loop_dft_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>522</Best-caseLatency>
+                    <Average-caseLatency>522</Average-caseLatency>
+                    <Worst-caseLatency>522</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>522</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <butterfly_loop_dft_loop>
+                        <Name>butterfly_loop_dft_loop</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>512</TripCount>
+                        <Latency>520</Latency>
+                        <AbsoluteTimeLatency>5.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </butterfly_loop_dft_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>2</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>24</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2223</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1955</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_283_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_2_fu_306_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_358_p2" SOURCE="fft_baseline/fft.cpp:53" URAM="0" VARIABLE="add_ln53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U112" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U113" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U106" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="temp_R"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U114" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U115" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U107" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="temp_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U108" SOURCE="fft_baseline/fft.cpp:56" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U109" SOURCE="fft_baseline/fft.cpp:57" URAM="0" VARIABLE="sub3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U110" SOURCE="fft_baseline/fft.cpp:58" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U111" SOURCE="fft_baseline/fft.cpp:59" URAM="0" VARIABLE="add3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_370_p2" SOURCE="fft_baseline/fft.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_real14_U" SOURCE="" URAM="0" VARIABLE="W_real14"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_imag6_U" SOURCE="" URAM="0" VARIABLE="W_imag6"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_stage_8</Name>
+            <Loops>
+                <butterfly_loop_dft_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>522</Best-caseLatency>
+                    <Average-caseLatency>522</Average-caseLatency>
+                    <Worst-caseLatency>522</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>522</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <butterfly_loop_dft_loop>
+                        <Name>butterfly_loop_dft_loop</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>512</TripCount>
+                        <Latency>520</Latency>
+                        <AbsoluteTimeLatency>5.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </butterfly_loop_dft_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>2</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>24</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2223</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1953</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_268_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_1_fu_294_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_350_p2" SOURCE="fft_baseline/fft.cpp:53" URAM="0" VARIABLE="add_ln53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U126" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U127" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U120" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="temp_R"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U128" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop_dft_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U129" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U121" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="temp_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U122" SOURCE="fft_baseline/fft.cpp:56" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U123" SOURCE="fft_baseline/fft.cpp:57" URAM="0" VARIABLE="sub2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U124" SOURCE="fft_baseline/fft.cpp:58" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop_dft_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U125" SOURCE="fft_baseline/fft.cpp:59" URAM="0" VARIABLE="add2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop_dft_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_362_p2" SOURCE="fft_baseline/fft.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_real15_U" SOURCE="" URAM="0" VARIABLE="W_real15"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_imag7_U" SOURCE="" URAM="0" VARIABLE="W_imag7"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_stage_9</Name>
+            <Loops>
+                <butterfly_loop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>522</Best-caseLatency>
+                    <Average-caseLatency>522</Average-caseLatency>
+                    <Worst-caseLatency>522</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.220 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.220 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.220 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>522</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <butterfly_loop>
+                        <Name>butterfly_loop</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>512</TripCount>
+                        <Latency>520</Latency>
+                        <AbsoluteTimeLatency>5.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>10</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </butterfly_loop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>2</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>24</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>2138</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1827</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="butterfly_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_236_p2" SOURCE="fft_baseline/fft.cpp:43" URAM="0" VARIABLE="add_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U140" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U141" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="mul1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U134" SOURCE="fft_baseline/fft.cpp:54" URAM="0" VARIABLE="temp_R"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U142" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="1" LOOP="butterfly_loop" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_2_max_dsp_1_U143" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="mul3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U135" SOURCE="fft_baseline/fft.cpp:55" URAM="0" VARIABLE="temp_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U136" SOURCE="fft_baseline/fft.cpp:56" URAM="0" VARIABLE="sub"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_3_full_dsp_1_U137" SOURCE="fft_baseline/fft.cpp:57" URAM="0" VARIABLE="sub1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U138" SOURCE="fft_baseline/fft.cpp:58" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="2" LOOP="butterfly_loop" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_3_full_dsp_1_U139" SOURCE="fft_baseline/fft.cpp:59" URAM="0" VARIABLE="add1"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_real16_U" SOURCE="" URAM="0" VARIABLE="W_real16"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="W_imag8_U" SOURCE="" URAM="0" VARIABLE="W_imag8"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft_streaming</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>7280</Best-caseLatency>
+                    <Average-caseLatency>7280</Average-caseLatency>
+                    <Worst-caseLatency>7280</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>72.800 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>72.800 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>72.800 us</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>2051</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>2051</PipelineInitiationInterval>
+                    <PipelineType>dataflow</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>98</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>2</UTIL_BRAM>
+                    <DSP>234</DSP>
+                    <AVAIL_DSP>9216</AVAIL_DSP>
+                    <UTIL_DSP>2</UTIL_DSP>
+                    <FF>22126</FF>
+                    <AVAIL_FF>2592000</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>19716</LUT>
+                    <AVAIL_LUT>1296000</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="Stage_R_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_R"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_R_1_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_R_1"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_R_2_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_R_2"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_R_3_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_R_3"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_R_4_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_R_4"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_R_5_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_R_5"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_R_6_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_R_6"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_R_7_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_R_7"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_R_8_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_R_8"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_R_9_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_R_9"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="Stage_I_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_I"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_I_1_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_I_1"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_I_2_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_I_2"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_I_3_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_I_3"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_I_4_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_I_4"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_I_5_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_I_5"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_I_6_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_I_6"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_I_7_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_I_7"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_I_8_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_I_8"/>
+                <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="Stage_I_9_U" SOURCE="fft_baseline/fft.cpp:67" URAM="0" VARIABLE="Stage_I_9"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="X_R" index="0" direction="in" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="X_R_address0" name="X_R_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="X_R_ce0" name="X_R_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="X_R_d0" name="X_R_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="X_R_q0" name="X_R_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="X_R_we0" name="X_R_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="X_R_address1" name="X_R_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="X_R_ce1" name="X_R_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="X_R_d1" name="X_R_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="X_R_q1" name="X_R_q1" usage="data" direction="in"/>
+                <hwRef type="port" interface="X_R_we1" name="X_R_we1" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="X_I" index="1" direction="in" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="X_I_address0" name="X_I_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="X_I_ce0" name="X_I_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="X_I_d0" name="X_I_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="X_I_q0" name="X_I_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="X_I_we0" name="X_I_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="X_I_address1" name="X_I_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="X_I_ce1" name="X_I_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="X_I_d1" name="X_I_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="X_I_q1" name="X_I_q1" usage="data" direction="in"/>
+                <hwRef type="port" interface="X_I_we1" name="X_I_we1" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="OUT_R" index="2" direction="out" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="OUT_R_address0" name="OUT_R_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="OUT_R_ce0" name="OUT_R_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="OUT_R_d0" name="OUT_R_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="OUT_R_q0" name="OUT_R_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="OUT_R_we0" name="OUT_R_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="OUT_R_address1" name="OUT_R_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="OUT_R_ce1" name="OUT_R_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="OUT_R_d1" name="OUT_R_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="OUT_R_q1" name="OUT_R_q1" usage="data" direction="in"/>
+                <hwRef type="port" interface="OUT_R_we1" name="OUT_R_we1" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="OUT_I" index="3" direction="out" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="OUT_I_address0" name="OUT_I_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="OUT_I_ce0" name="OUT_I_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="OUT_I_d0" name="OUT_I_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="OUT_I_q0" name="OUT_I_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="OUT_I_we0" name="OUT_I_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="OUT_I_address1" name="OUT_I_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="OUT_I_ce1" name="OUT_I_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="OUT_I_d1" name="OUT_I_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="OUT_I_q1" name="OUT_I_q1" usage="data" direction="in"/>
+                <hwRef type="port" interface="OUT_I_we1" name="OUT_I_we1" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="X_R_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="X_R_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_R_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_R_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="X_R_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_R_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_R_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="X_R_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_R_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_R_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="X_R_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_R_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_R_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="X_R_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_R_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_R_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="X_R_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_R_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_I_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="X_I_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_I_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_I_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="X_I_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_I_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_I_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="X_I_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_I_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_I_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="X_I_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_I_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_I_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="X_I_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_I_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X_I_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="X_I_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X_I_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="X_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_R_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="OUT_R_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_R_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_R_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="OUT_R_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_R_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_R_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="OUT_R_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_R_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_R_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="OUT_R_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_R_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_R_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="OUT_R_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_R_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_R_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="OUT_R_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_R_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_R"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_I_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="OUT_I_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_I_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_I_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="OUT_I_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_I_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_I_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="OUT_I_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_I_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_I_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="10">
+            <portMaps>
+                <portMap portMapName="OUT_I_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_I_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_I_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="OUT_I_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_I_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_I"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="OUT_I_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="OUT_I_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>OUT_I_q1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="OUT_I"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_MEMORY">
+                <table isCollapsed="0">
+                    <keys size="2">Interface, Bitwidth</keys>
+                    <column name="OUT_I_address0">10, , </column>
+                    <column name="OUT_I_address1">10, , </column>
+                    <column name="OUT_I_d0">32, , </column>
+                    <column name="OUT_I_d1">32, , </column>
+                    <column name="OUT_I_q0">32, , </column>
+                    <column name="OUT_I_q1">32, , </column>
+                    <column name="OUT_R_address0">10, , </column>
+                    <column name="OUT_R_address1">10, , </column>
+                    <column name="OUT_R_d0">32, , </column>
+                    <column name="OUT_R_d1">32, , </column>
+                    <column name="OUT_R_q0">32, , </column>
+                    <column name="OUT_R_q1">32, , </column>
+                    <column name="X_I_address0">10, , </column>
+                    <column name="X_I_address1">10, , </column>
+                    <column name="X_I_d0">32, , </column>
+                    <column name="X_I_d1">32, , </column>
+                    <column name="X_I_q0">32, , </column>
+                    <column name="X_I_q1">32, , </column>
+                    <column name="X_R_address0">10, , </column>
+                    <column name="X_R_address1">10, , </column>
+                    <column name="X_R_d0">32, , </column>
+                    <column name="X_R_d1">32, , </column>
+                    <column name="X_R_q0">32, , </column>
+                    <column name="X_R_q1">32, , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst">reset, ap_rst, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="X_R">in, float*</column>
+                    <column name="X_I">in, float*</column>
+                    <column name="OUT_R">out, float*</column>
+                    <column name="OUT_I">out, float*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Interface, HW Type, HW Usage</keys>
+                    <column name="X_R">X_R_address0, port, offset, </column>
+                    <column name="X_R">X_R_ce0, port, , </column>
+                    <column name="X_R">X_R_d0, port, , </column>
+                    <column name="X_R">X_R_q0, port, , </column>
+                    <column name="X_R">X_R_we0, port, , </column>
+                    <column name="X_R">X_R_address1, port, offset, </column>
+                    <column name="X_R">X_R_ce1, port, , </column>
+                    <column name="X_R">X_R_d1, port, , </column>
+                    <column name="X_R">X_R_q1, port, , </column>
+                    <column name="X_R">X_R_we1, port, , </column>
+                    <column name="X_I">X_I_address0, port, offset, </column>
+                    <column name="X_I">X_I_ce0, port, , </column>
+                    <column name="X_I">X_I_d0, port, , </column>
+                    <column name="X_I">X_I_q0, port, , </column>
+                    <column name="X_I">X_I_we0, port, , </column>
+                    <column name="X_I">X_I_address1, port, offset, </column>
+                    <column name="X_I">X_I_ce1, port, , </column>
+                    <column name="X_I">X_I_d1, port, , </column>
+                    <column name="X_I">X_I_q1, port, , </column>
+                    <column name="X_I">X_I_we1, port, , </column>
+                    <column name="OUT_R">OUT_R_address0, port, offset, </column>
+                    <column name="OUT_R">OUT_R_ce0, port, , </column>
+                    <column name="OUT_R">OUT_R_d0, port, , </column>
+                    <column name="OUT_R">OUT_R_q0, port, , </column>
+                    <column name="OUT_R">OUT_R_we0, port, , </column>
+                    <column name="OUT_R">OUT_R_address1, port, offset, </column>
+                    <column name="OUT_R">OUT_R_ce1, port, , </column>
+                    <column name="OUT_R">OUT_R_d1, port, , </column>
+                    <column name="OUT_R">OUT_R_q1, port, , </column>
+                    <column name="OUT_R">OUT_R_we1, port, , </column>
+                    <column name="OUT_I">OUT_I_address0, port, offset, </column>
+                    <column name="OUT_I">OUT_I_ce0, port, , </column>
+                    <column name="OUT_I">OUT_I_d0, port, , </column>
+                    <column name="OUT_I">OUT_I_q0, port, , </column>
+                    <column name="OUT_I">OUT_I_we0, port, , </column>
+                    <column name="OUT_I">OUT_I_address1, port, offset, </column>
+                    <column name="OUT_I">OUT_I_ce1, port, , </column>
+                    <column name="OUT_I">OUT_I_d1, port, , </column>
+                    <column name="OUT_I">OUT_I_q1, port, , </column>
+                    <column name="OUT_I">OUT_I_we1, port, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <PragmaReport>
+        <Pragma type="pipeline" location="fft_baseline/fft.cpp:49" status="valid" parentFunction="fft_stage" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="fft_baseline/fft.cpp:66" status="warning" parentFunction="fft_streaming" variable="" isDirective="0" options="">
+            <Msg msg_id="214-114" msg_severity="WARNING" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+        </Pragma>
+        <Pragma type="array_partition" location="fft_baseline/fft.cpp:68" status="valid" parentFunction="fft_streaming" variable="Stage_R" isDirective="0" options="variable=Stage_R dim=1 complete"/>
+        <Pragma type="array_partition" location="fft_baseline/fft.cpp:69" status="valid" parentFunction="fft_streaming" variable="Stage_I" isDirective="0" options="variable=Stage_I dim=1 complete"/>
+        <Pragma type="unroll" location="fft_baseline/fft.cpp:74" status="valid" parentFunction="fft_streaming" variable="" isDirective="0" options=""/>
+    </PragmaReport>
+</profile>
+

@@ -1,0 +1,66 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fft_baseline/fft.cpp, Line: 65, Column: 0 }
+Function:        _Z13fft_streamingPfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        stage_loop
+  - String:          ''' ('
+  - LoopLoc:         'fft_baseline/fft.cpp:73:3'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft_streaming
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: fft_baseline/fft.cpp, Line: 15, Column: 0 }
+Function:        _Z11bit_reversePfS_S_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'reverse_bits(unsigned int)'
+    DebugLoc:        { File: fft_baseline/fft.cpp, Line: 5, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'bit_reverse(float*, float*, float*, float*)'
+    DebugLoc:        { File: fft_baseline/fft.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: fft_baseline/fft.cpp, Line: 67, Column: 8 }
+Function:        _Z13fft_streamingPfS_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          Stage_R
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: fft_baseline/fft.cpp, Line: 67, Column: 27 }
+Function:        _Z13fft_streamingPfS_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          Stage_I
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

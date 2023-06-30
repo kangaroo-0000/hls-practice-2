@@ -1,0 +1,15 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="fft_streaming" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="fft_streaming"/>
+            </pragma>
+        </directive>
+        <directive functionName="fft_streaming" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="fft_streaming"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

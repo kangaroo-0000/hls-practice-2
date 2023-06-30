@@ -1,0 +1,10 @@
+/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp:30627:2: warning: Added loop label VITIS_LOOP_7_1:   [xilinx-label-all-loops]
+ for (i = 0; i < 10; i++) {
+ ^~~
+ VITIS_LOOP_7_1: 
+/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp:30627:2: note: FIX-IT applied suggested code changes
+/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp:30640:3: warning: Added loop label VITIS_LOOP_20_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < 1024; i++) {
+  ^~~
+  VITIS_LOOP_20_1: 
+/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp:30640:3: note: FIX-IT applied suggested code changes

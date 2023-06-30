@@ -1,0 +1,22 @@
+---
+MainSourceFile:  /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_7_1:  '
+    FileOffset:      7
+    FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/fft.cpp
+    Replacements:    
+      - FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp
+        Offset:          853221
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_7_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_20_1:  '
+    FileOffset:      20
+    FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/fft.cpp
+    Replacements:    
+      - FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft.pp.0.cpp
+        Offset:          853477
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_20_1: '
+...

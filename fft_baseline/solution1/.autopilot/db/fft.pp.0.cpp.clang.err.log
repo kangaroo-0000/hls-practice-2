@@ -1,0 +1,19 @@
+fft_baseline/fft.cpp:49:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fft_stage_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline
+        ^
+/users/ugrad/chungmop/hls-practice/fft_baseline/solution1/csynth.tcl:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=fft_streaming_XLX_SEP_ PragmaOptions=name=fft_streaming_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=fft_streaming
+        ^
+fft_baseline/fft.cpp:66:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fft_streaming_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS dataflow
+        ^
+fft_baseline/fft.cpp:68:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fft_streaming_XLX_SEP_ PragmaOptions=variable=Stage_R dim=1 complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=Stage_R dim=1 complete
+        ^
+fft_baseline/fft.cpp:69:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fft_streaming_XLX_SEP_ PragmaOptions=variable=Stage_I dim=1 complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=Stage_I dim=1 complete
+        ^
+fft_baseline/fft.cpp:74:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fft_streaming_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+6 warnings generated.

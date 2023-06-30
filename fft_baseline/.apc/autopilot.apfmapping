@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fft.h" path="/users/ugrad/chungmop/hls-practice/fft_baseline/fft.h"/>
+    <originFiles name="fft.cpp" path="/users/ugrad/chungmop/hls-practice/fft_baseline/fft.cpp"/>
+    <originFiles name="fft_top.cpp" path="/users/ugrad/chungmop/hls-practice/fft_baseline/fft_top.cpp"/>
+    <originFiles name="tw_i.h" path="/users/ugrad/chungmop/hls-practice/fft_baseline/tw_i.h"/>
+    <originFiles name="tw_r.h" path="/users/ugrad/chungmop/hls-practice/fft_baseline/tw_r.h"/>
+  </source>
+  <testbench>
+    <originFiles name="fft_top.cpp" path="/users/ugrad/chungmop/hls-practice/fft_baseline/fft_top.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

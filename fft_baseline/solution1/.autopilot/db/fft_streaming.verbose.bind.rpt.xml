@@ -1,0 +1,56 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'fft_streaming'" level="0">
+<item name = "Date">Fri Jun 30 11:19:39 2023
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">fft_baseline</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu11p-flga2577-1-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.297 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">7280, 7280, 72.800 us, 72.800 us, 2051, 2051, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_bit_reverse_fu_166">bit_reverse, 2050, 2050, 20.500 us, 20.500 us, 2050, 2050, no</column>
+<column name="grp_fft_stage_fu_178">fft_stage, 522, 522, 5.220 us, 5.220 us, 522, 522, no</column>
+<column name="grp_fft_stage_1_fu_186">fft_stage_1, 522, 522, 5.220 us, 5.220 us, 522, 522, no</column>
+<column name="grp_fft_stage_2_fu_198">fft_stage_2, 522, 522, 5.220 us, 5.220 us, 522, 522, no</column>
+<column name="grp_fft_stage_3_fu_210">fft_stage_3, 522, 522, 5.220 us, 5.220 us, 522, 522, no</column>
+<column name="grp_fft_stage_4_fu_222">fft_stage_4, 522, 522, 5.220 us, 5.220 us, 522, 522, no</column>
+<column name="grp_fft_stage_5_fu_234">fft_stage_5, 522, 522, 5.220 us, 5.220 us, 522, 522, no</column>
+<column name="grp_fft_stage_6_fu_246">fft_stage_6, 522, 522, 5.220 us, 5.220 us, 522, 522, no</column>
+<column name="grp_fft_stage_7_fu_258">fft_stage_7, 522, 522, 5.220 us, 5.220 us, 522, 522, no</column>
+<column name="grp_fft_stage_8_fu_270">fft_stage_8, 522, 522, 5.220 us, 5.220 us, 522, 522, no</column>
+<column name="grp_fft_stage_9_fu_282">fft_stage_9, 522, 522, 5.220 us, 5.220 us, 522, 522, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

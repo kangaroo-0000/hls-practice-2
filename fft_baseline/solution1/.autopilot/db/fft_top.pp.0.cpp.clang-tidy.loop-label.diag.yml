@@ -1,0 +1,40 @@
+---
+MainSourceFile:  /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_17_1:  '
+    FileOffset:      17
+    FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/fft_top.cpp
+    Replacements:    
+      - FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp
+        Offset:          916607
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_17_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_29_2:  '
+    FileOffset:      29
+    FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/fft_top.cpp
+    Replacements:    
+      - FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp
+        Offset:          916905
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_29_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_55_3:  '
+    FileOffset:      55
+    FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/fft_top.cpp
+    Replacements:    
+      - FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp
+        Offset:          917371
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_55_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_67_4:  '
+    FileOffset:      67
+    FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/fft_top.cpp
+    Replacements:    
+      - FilePath:        /users/ugrad/chungmop/hls-practice/fft_baseline/solution1/.autopilot/db/fft_top.pp.0.cpp
+        Offset:          917603
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_67_4: '
+...
