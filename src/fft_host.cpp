@@ -1,25 +1,27 @@
 #include <fstream>
 #include <iostream>
-
+#include "hls_stream.h"
 #include "fft.h"
 
 int main() {
-  DTYPE real_input[SIZE], imag_input[SIZE];
-  DTYPE real_output[SIZE], imag_output[SIZE];
-
-  // Generate the inputs
+  hls::stream<DTYPE> real_in_stream("real_in_stream"), imag_in_stream("imag_in_stream");
+  hls::stream<DTYPE> real_out_stream("real_out_stream"), imag_out_stream("imag_out_stream");
+  std::cout << "in main" << std::endl;
+  // Generate the inputs and write them to the streams
   for (int i = 0; i < SIZE; i++) {
-    real_input[i] = i;
-    imag_input[i] = 0.0;
+    real_in_stream.write(i);
+    imag_in_stream.write(0.0);
   }
 
   // Perform FFT
-  fft_streaming(real_input, imag_input);
+  fft_streaming(real_in_stream, imag_in_stream, real_out_stream, imag_out_stream);
 
   // Print FFT output
   std::ofstream output_file("out.fft.dat");
   for (int i = 0; i < SIZE; i++) {
-    output_file << i << "\t" << real_input[i] << "\t" << imag_input[i] << "\n";
+    DTYPE real_output = real_out_stream.read();
+    DTYPE imag_output = imag_out_stream.read();
+    output_file << i << "\t" << real_output << "\t" << imag_output << "\n";
   }
   output_file.close();
 
@@ -31,8 +33,10 @@ int main() {
     DTYPE golden_real, golden_imag;
     int index;
     golden_file >> index >> golden_real >> golden_imag;
-    DTYPE current_error = std::abs(golden_real - real_input[i]) +
-                          std::abs(golden_imag - imag_input[i]);
+    DTYPE real_output = real_out_stream.read();
+    DTYPE imag_output = imag_out_stream.read();
+    DTYPE current_error = std::abs(golden_real - real_output) +
+                          std::abs(golden_imag - imag_output);
     average_error += current_error;
     if (current_error > max_error) {
       max_error = current_error;
